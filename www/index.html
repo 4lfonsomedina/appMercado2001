@@ -20,30 +20,7 @@
 <!-- INICIO BODY -->
 <body style="touch-action: none">
     <div class="splash"></div>
-    <!-- MENU -->
-    <div class="row menu_bar">
-        <div class="col-xs-3">
-            <a href="#" class="abrir_menu_lateral">
-                <span class="mini_burbuja_menu" hidden> ! </span>
-                <i class="fa fa-bars fa-3x" aria-hidden="true"></i>
-            </a>
-        </div>
-        <div class="col-xs-6" style="text-align: center">
-            <a href="#" class="menu_inicio" >
-                <img width="80%" src="img/logo.png" style="margin-top: 2px">
-            </a>
-        </div>
-        <div class="col-xs-3" style="text-align: right;">
-            <a href="#" class="abrir_menu_lateral_der">
-                <span class="mini_burbuja" hidden>1</span>
-                <i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
-            </a>
-        </div>
-    </div>
-
-
-
-<!-- BUSCAR -->
+    <!-- BUSCAR -->
     <div class="row menu_buscar">
         <div class="col-xs-2 regresar_banner img_dep back_click" dep="" style="display: none">
             <img src="img/Flecha.png" width="80%">
@@ -57,49 +34,48 @@
         </div>
     </div>
 
+
+
+
+
 <!-- Otro producto -->
-<a class="producto_no_encontrado row_articulo" style="display: none" producto="01010101" departamento="000" descripcion="Otro producto" unidad="NA" imagen="https://admin.testing-device.com/assets/img/productos/01010101.png" precio="0.0000"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Otro</a>
+<a class="producto_no_encontrado row_articulo" style="display: none" producto="01010101" departamento="000" descripcion="Otro producto" unidad="NA" imagen="https://app.mercado2001.com/assets/img/productos/01010101.png" precio="0.0000"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Manual</a>
 
     <!-- CONTENEDOR PRODUCTOS -->
     <div id="contenedor_articulos">
         <div class="contenedor_banner">
+        <div class="col-xs-12">
             <a href="marketing.html" class="blank_a" id="link_banner" mensaje='0' disabled="disabled">
-                <div class="img_banner" style="padding-right: 15px; padding-left: 15px;">
-                    <img id="imgnc" src="#" width="100%" style="border-radius: 15px">
+                <div class="img_banner" >
+                    <img id="imgnc" src="#" width="100%">
                     <script>
                         var d = new Date(); 
-                        document.getElementById("imgnc").src="https://admin.testing-device.com/assets/img/APP/Portada.jpg?ver=" + d.getTime();
+                        document.getElementById("imgnc").src="https://app.mercado2001.com/assets/img/APP/Portada.jpg?ver=" + d.getTime();
                     </script>
                 </div>
             </a>
-            <div class="img_banner img_subdep" subdep="999" dep="000">
-                <img id="imgnc2" src="#" width="100%" style="border-radius: 15px">
+        </div>
+    <div class="col-xs-12">
+            <div class="img_banner img_subdep" subdep="999" dep="000" style="height: auto;">
+                <img id="imgnc2" src="#" width="100%" style="border-radius: 15px" style="box-shadow: -5px 5px 3px 0px #2C2C2C;">
                 <script>
                     var d = new Date(); 
-                    document.getElementById("imgnc2").src="https://admin.testing-device.com/assets/img/APP/sub-banner.png?ver=" + d.getTime();
+                    document.getElementById("imgnc2").src="https://app.mercado2001.com/assets/img/APP/sub-banner.png?ver=" + d.getTime();
                 </script>
             </div>
-            <div class="img_banner img_dep ini_" dep="005" nombre="Frutas y Verduras">
-                <img src="img/2005.png" width="100%">
-            </div>
-            <div class="img_banner img_dep ini_" dep="002" nombre="Carnes y aves">
-                <img src="img/2002.png" width="100%">
-            </div>
-            <div class="img_banner img_dep ini_" dep="01" nombre="Lacteos">
-                <img src="img/201.png" width="100%">
-            </div>
-            <div class="img_banner img_dep ini_" dep="001" nombre="Abarrotes">
-                <img src="img/2001.png" width="100%">
-            </div>
-            <div class="img_banner img_dep ini_" dep="008" nombre="Bebidas">
-                <img src="img/1008.png" width="100%">
-            </div>
+    </div>
+        <div id="div_departamentos"></div>
+        <div class="col-xs-6" >
+            
+        </div>
+            <!--
             <div class="img_banner img_dep ini_" dep="007" nombre="Ferbis Cuisine">
                 <img src="img/2007.png" width="100%">
             </div>
             <div class="img_banner img_dep ini_" dep="009" nombre="Limpieza">
                 <img src="img/2009.png" width="100%">
             </div>
+        -->
         </div>
     </div>
     <!-- CONTENEDOR MENU IZQUIERDO -->
@@ -119,19 +95,6 @@
                 <i class="fa fa-home fa-2x" aria-hidden="true"></i>
                 <span>Inicio</span>
             </div>
-        </a>
-        <a href="pedidos.html" class="emergente_a blank_a">
-            <div class="opcion_menu">
-                <i class="fa fa-shopping-basket fa-2x" aria-hidden="true"></i>
-                <span>Mis Pedidos</span>
-            </div>
-        </a>
-        <a href="notificaciones.html" class="emergente_a blank_a">
-            <div class="opcion_menu">
-                <i class="fa fa-bell fa-2x" aria-hidden="true"></i>
-                <span>Notificaciones</span>
-                <span class="mini_burbuja_notificaciones">1</span>
-            </div> 
         </a>
         <a href="cuenta.html" class="emergente_a blank_a">
             <div class="opcion_menu">
@@ -168,7 +131,7 @@
     <a href="#" class="sombra_menu"></a>
     <div class="menu_lateral_der">
         <div class="menu_lateral_carrito">
-            <h3 style="width: 100%;"><span class="cant_carrito">0</span> Artículos en carrito</h3>
+            <h3 style="width: 100%;"><span class="cant_carrito">0</span> Artículos</h3>
 
         </div>
         <div class="contenido_carrito">
@@ -177,8 +140,8 @@
         <div class="div_procesar_pedido">
             <div class="div_procesar_pedido_contenido">
                  <a href="#" class="btn btn-default btn-sm btn_otro_pedido row_articulo"
-                 producto="01010101" departamento="000" descripcion="Otro producto" unidad="NA" imagen="https://admin.testing-device.com/assets/img/productos/01010101.png" precio="0.0000">
-                    Agregar producto no encontrado</i>
+                 producto="01010101" departamento="000" descripcion="Otro producto" unidad="NA" imagen="https://app.mercado2001.com/assets/img/productos/01010101.png" precio="0.0000">
+                    <i class="fa fa-pencil-square-o"></i> Agregar manualmente</i>
                 </a>
                 Total (aprox) $<span class="total_pedido">0.00</span>
                 <a href="pedido.html" class="btn btn-success btn-lg blank_a btn_realizar_pedido" mensaje="El consumo mínimo es de $200.00">
@@ -189,13 +152,48 @@
     </div>
 </div>
 
+
+    
+
+
+<!-- MENU -->
+    <div class="row menu_bar" style="text-align: center;">
+        <div class="col-xs-2">
+            <a href="#" class="abrir_menu_lateral">
+                <i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i> <span style="font-size: 8px;"></span>
+            </a>
+        </div>
+        <div class="col-xs-2">
+            <a href="pedidos.html" class="emergente_a blank_a">
+                <i class="fa fa-shopping-basket fa-2x" aria-hidden="true"></i> <span style="font-size: 8px;"></span>
+            </a>
+        </div>
+        <div class="col-xs-4">
+            <a href="#" class="menu_inicio" >
+                <img width="120%" src="img/logo.png" style="margin-top: -10px">
+            </a>
+        </div>
+        <div class="col-xs-2">
+            <a href="notificaciones.html" class="emergente_a blank_a">
+                <span class="mini_burbuja_notificaciones">1</span>
+                <i class="fa fa-bell-o fa-2x" aria-hidden="true"></i> <span style="font-size: 8px;"></span>
+            </a>
+        </div>
+        <div class="col-xs-2">
+            <a href="#" class="abrir_menu_lateral_der">
+                <span class="mini_burbuja" hidden>1</span>
+                <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i> <span style="font-size: 8px;"></span>
+            </a>
+        </div>
+    </div>
+
 <!-- MODAL PARA INDICAR LA CANTIDAD -->
 <div id="agregarArticuloModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title"><b>Agregar al Carrito</b></h4>
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+        <h4 class="modal-title"><b> Agregar al Carrito</b></h4>
       </div>
       <form id="form_alta_carrito">
       <div class="modal-body">
@@ -284,14 +282,9 @@
       
       <div class="modal-footer">
         <div class="row">
-            <div class="col-xs-6">
-                <button type="button" class="btn btn-warning" data-dismiss="modal">
-                    <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Regresar
-                </button>
-            </div>
-            <div class="col-xs-6">
+            <div class="col-xs-12">
                 <button type="button" class="btn btn-success agregar_al_carrito_btn">
-                    <i class="fa fa-cart-plus" aria-hidden="true"></i> Agregar
+                    Agregar al carrito
                 </button>
             </div>
         </div>
@@ -309,12 +302,12 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" style="text-align: center"><b>Bienvenido!</b></h4>
+        <h4 class="modal-title" style="text-align: center"><b>¡Bienvenido!</b></h4>
       </div>
       <form id="form_alta_cliente">
       <div class="modal-body modal_bienvenida_body" style="text-align: center">
         <img width="50%" src="img/logo.png" style="margin-top: 2px">
-        <br><br>Para brindarte un mejor servicio, apoyanos con el siguiente dato.<br><br>
+        <br><br><br><br>Hola, gracias por descargar la aplicación de mercado2001, tenemos el compromiso de brindar un servicio de calidad y es por eso que ponemos a tu disposición nuestra APP. <br><br>Antes que nada. <br><b>¿Cuál es tu nombre?</b><br><br>
         
         <input type="text" class="form-control modal_bienvenida_nombre" id="cliente_nombre">
         Nombre Completo
@@ -322,9 +315,9 @@
       <div class="modal-footer">
         <div class="row">
             <div class="col-xs-12">
-                <a href="terminos.html" class="emergente_a blank_a"> <i class="fa fa-book" aria-hidden="true"></i> Términos y Condiciones</a>
+                <a href="terminos.html" class="emergente_a blank_a">Términos y Condiciones APP Mercado2001</a>
 
-                <buttton class="btn btn-danger btn_bienvenida btn-lg"> Iniciar <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <buttton class="btn btn-danger btn_bienvenida btn-lg"> ¡Acceder ya! 
                 </buttton>
                 
             </div>

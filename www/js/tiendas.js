@@ -7,8 +7,8 @@ jQuery(document).ready(function($) {
   })
 });
 function cargar_mapas(){
-	//mapa brasil 32.666983, -115.437199
-	myLatLng = { lat: 32.666983 , lng: -115.437199 };
+	//mapa prohogar 32.655015106785555, -115.43724560600889
+	myLatLng = { lat: 32.655015 , lng: -115.437245 };
 	$(".cuenta_lat").val(myLatLng.lat);
 	$(".cuenta_lon").val(myLatLng.lng);
 	
@@ -26,7 +26,7 @@ function cargar_mapas(){
     });	
 
     //mapa San Marcos 32.633541, -115.493229
-	myLatLng = { lat: 32.633541 , lng: -115.493229 };
+	myLatLng = { lat: 32.655015 , lng: -115.437245 };
 	$(".cuenta_lat").val(myLatLng.lat);
 	$(".cuenta_lon").val(myLatLng.lng);
 	
@@ -44,7 +44,7 @@ function cargar_mapas(){
     });	
 
     //mapa Gastro 32.656351, -115.411593
-	myLatLng = { lat: 32.656351 , lng: -115.411593 };
+	myLatLng = { lat: 32.655015 , lng: -115.437245 };
 	$(".cuenta_lat").val(myLatLng.lat);
 	$(".cuenta_lon").val(myLatLng.lng);
 	

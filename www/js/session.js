@@ -81,7 +81,7 @@ $(document).ready(function() {
 				$("#modal_bienvenida").modal("hide");
 			})
 		}else{
-			alert_2("Es importante que contemos su nombre para saber con quien nos dirigimos.");
+			alert_2("Por favor indiquenos su nombre.");
 		}
 	})
 });
