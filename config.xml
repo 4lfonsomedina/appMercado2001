@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.sd_ferbis" version="2.2.0"
+<widget id="com.phonegap.mercado2001" version="1.0.0"
     xmlns="http://www.w3.org/ns/widgets" 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Ferbis</name>
+    <name>Mercado2001</name>
     <description>
-        Ferbis
+        Mercado2001
     </description>
-    <author email="sistemas@ferbis.com" href="http://ferbis.com">
+    <author email="4lfonsomedina@gmail.com" href="http://mercado2001.com">
         Ing. Alfonso Medina Duran
     </author>
     <content src="index.html" />

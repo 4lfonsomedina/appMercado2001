@@ -53,8 +53,7 @@ document.ontouchmove = event => {event.preventDefault();};
 				string+="<div class='col-xs-6' style='text-align:right'><a href='#' class='ver_todo_link' dep='"+temp_dep+"'>Ver todo</a></div></div>";
 				string+="<div class='contenedor_subdepartamentos'>"
 				$.each(jQuery.parseJSON(r), function( i, subdep ) {
-					string+="<div class='col-xs-6 img_subdep' dep='"+subdep.id_departamento+"' subdep='"+subdep.id_subdepartamento+"'>"+
-					"<img src='"+subdep.imagen+"'><p>"+subdep.nombre_subdepartamento+"</p></div>";
+					string+=construir_subdepartamento(subdep.id_departamento,subdep.id_subdepartamento,subdep.imagen,subdep.nombre_subdepartamento,subdep.color,subdep.color2);
 				})
 				string+="</div></div>";
 				crecer_buscador();
@@ -584,21 +583,26 @@ function get_departamentos_inicio(){
 	$.post(url_api+'get_departamentos',{id_cliente:sesion_local.getItem("FerbisAPP_id")},function(r){
 		var deps="";
 		$.each(jQuery.parseJSON(r), function(index, dep) {
-			 deps+=construir_departamento(dep.id_departamento,dep.nombre_departamento,dep.imagen,dep.color);
+			 deps+=construir_departamento(dep.id_departamento,dep.nombre_departamento,dep.imagen,dep.color,dep.color2);
 		});
 		$("#div_departamentos").html(deps);
 	}).fail(function(error) { alert_2("Error de conexión...");  console.log(error.responseJSON); });
 }
-function construir_departamento(id_departamento,descripcion,imagen,color){
+function construir_departamento(id_departamento,descripcion,imagen,color,color2){
 	return "<div class='col-xs-6' ><a href='#' class='img_dep' dep='"+id_departamento+"' nombre='"+descripcion+"'>"+
             "<div class='contenedor_departamento' style='background-color: "+color+";'>"+
-                "<p>"+descripcion+"</p>"+
+                "<p style='color:"+color2+"'>"+descripcion+"</p>"+
                 "<div>"+
                     "<img src='"+imagen+"' >"+
                 "</div>"+
             "</div>"+
             "</a></div>";
 }
+
+function construir_subdepartamento(id_departamento,id_subdepartamento,imagen,nombre_subdepartamento,color,color2,){
+		return "<div class='col-xs-6 img_subdep' dep='"+id_departamento+"' subdep='"+id_subdepartamento+"'>"+
+					"<div class='contenedor_subdepartamento'style='background-color:"+color+"; color:"+color2+";'><img src='"+imagen+"'><p>"+nombre_subdepartamento+"</p></div></div>";
+	}
 
 // loader global
 function loader(){

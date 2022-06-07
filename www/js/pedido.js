@@ -6,6 +6,7 @@ function cargar_datos() {
 		$(".cuenta_lon").val(cuenta.lon);
 		$(".cuenta_nombre").val(cuenta.nombre);
 		$(".cuenta_telefono").val(cuenta.telefono);
+		$(".cuenta_telefono2").val(cuenta.telefono2);
 		$(".cuenta_correo").val(cuenta.correo);
 		$(".cuenta_numero").val(cuenta.numero);
 		$(".cuenta_colonia").val(cuenta.dir_colonia);

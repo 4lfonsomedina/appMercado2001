@@ -17,8 +17,8 @@
 					if(estatus>=4){estatusA[4]='danger';}
 					if(estatus==0){estatusB[0]='Captura'; 	status_desc="Captura";	}
 					if(estatus==1){estatusB[1]='Surtiendo'; status_desc="Surtiendo";}
-					if(estatus==2){estatusB[2]='Preparado'; status_desc="Preparado";}
-					if(estatus==3){estatusB[3]='Listo'; 	status_desc="Entrega";}
+					if(estatus==2){estatusB[2]='Listo'; status_desc="En camino";}
+					if(estatus==3){estatusB[3]='Finalizado'; 	status_desc="Entregado";}
 					if(estatus==4){estatusB[4]='Cancelado'; status_desc="Cancelado";}
 
 					/* Pago status */
