@@ -27,7 +27,7 @@ $(document).ready(function() {
 		if(!$(this).attr("disabled")){
 			var el = $(this);
 			$(".sombra_menu").click();
-	   		window.open(el.attr('href'));
+	   		location.replace(el.attr('href'));
 		}else{
 			if($(this).attr("mensaje")!="0")
 				alert_2($(this).attr("mensaje"));
@@ -40,7 +40,7 @@ $(document).ready(function() {
 	//regresar a inicio
 	$(document).on("click",".menu_inicio",function(){
 		$(".splash").fadeIn(500,function(){
-			window.location.href = "index.html";
+			location.replace("index.html");
 		});
 		
 	})
@@ -55,7 +55,7 @@ $(document).ready(function() {
 	//cerrar ventanas emergentes
 	$(document).on("click",".cerrar_ventana",function(){
 		$(".splash").fadeIn(500,function(){
-			closeBrowser();
+			location.replace("index.html");
 		})
 	})
 
