@@ -628,18 +628,12 @@ function reducir_buscador(){
 	$(".producto_no_encontrado").fadeIn(100);
 }
 function regresar_inicio(){
-	location.reload();
-	/*
-	$("#contenedor_articulos").fadeOut(500,"swing",function(){
-		$.post(path_+'/contenido/banner.html', function(resp_json){
-			$("#contenedor_articulos").html(resp_json);
-			$("#contenedor_articulos").slideDown(500,function(){
-
-			});
-			crecer_buscador();
-		})
-	});
-	*/
+	$("#contenido_global").hide(800,function(){
+		$.post("dashboard.html",function(r) {
+   			$("#contenido_global").html(r);
+   			$("#contenido_global").show(800);
+   		});
+	})
 }
 
 
