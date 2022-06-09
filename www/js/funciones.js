@@ -1,23 +1,8 @@
 //variables genericas en todos los scripts posteriores a funciones.js
 var url_api = "https://app.mercado2001.com/index.php/api_controller/";
-if( /iPhone|iPad/i.test(navigator.userAgent) ) {
-   console.log('IOS');
-}
-if(/Android/i.test(navigator.userAgent)){
-	console.log('ANDROID');
-}
-$(document).ready(function() {
-
-//quitar slash
-//deshabilitar zoom
-// stop ios bounce and zoom 
-document.ontouchmove = event => {event.preventDefault();}; 
-//variables de inicio para las funciones
-	iniciar_app();
 
 
-// funcion que se ejecuta al iniciar la aplicacion PRODUCTOS FERBIS
-	function iniciar_app(){
+function iniciar_app(){
 		actualizar_burbuja_carrito();
 		actualizar_burbuja_notificaciones();
 		get_departamentos_inicio();
@@ -33,7 +18,11 @@ document.ontouchmove = event => {event.preventDefault();};
 			actualizar_burbuja_notificaciones();
 		});
 		*/
-	}
+}
+
+
+$(document).ready(function() {
+
 	
 
 // Al precionar el departamento

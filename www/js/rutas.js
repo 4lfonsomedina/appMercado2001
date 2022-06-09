@@ -26,7 +26,10 @@ $(document).ready(function() {
 		x.preventDefault();
 		if(!$(this).attr("disabled")){
 			$(".sombra_menu").click();
-	   		window.location.href = $(this).attr('abrir');
+	   		//window.location.href = $(this).attr('abrir');
+	   		$.post($(this).attr('abrir'),function(r) {
+	   			$("#contenido_global").html(r);
+	   		});
 		}else{
 			if($(this).attr("mensaje")!="0")
 				alert_2($(this).attr("mensaje"));
@@ -35,11 +38,13 @@ $(document).ready(function() {
 	});	
 	
 	// desaparecer splash
-	setTimeout(function(){$(".splash").fadeOut(500);},500);
+	
 	//regresar a inicio
 	$(document).on("click",".menu_inicio",function(){
 		$(".splash").fadeIn(500,function(){
-			window.location.href ="index.html";
+			$.post("dashboard.html",function(r) {
+	   			$("#contenido_global").html(r);
+	   		});
 		});
 		
 	})
@@ -54,7 +59,9 @@ $(document).ready(function() {
 	//cerrar ventanas emergentes
 	$(document).on("click",".cerrar_ventana",function(){
 		$(".splash").fadeIn(500,function(){
-			window.location.href = "index.html";
+			$.post("dashboard.html",function(r) {
+	   			$("#contenido_global").html(r);
+	   		});
 		})
 	})
 
