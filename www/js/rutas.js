@@ -27,7 +27,7 @@ $(document).ready(function() {
 		if(!$(this).attr("disabled")){
 			var el = $(this);
 			$(".sombra_menu").click();
-	   		location.replace(el.attr('href'));
+	   		location.replace(el.attr('abrir'));
 		}else{
 			if($(this).attr("mensaje")!="0")
 				alert_2($(this).attr("mensaje"));

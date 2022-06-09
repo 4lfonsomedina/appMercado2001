@@ -41,7 +41,7 @@ $(document).ready(function() {
 					
 					"<i class='fa fa-bars' aria-hidden='true'></i> Menú -> <i class='fa fa-shopping-basket' aria-hidden='true'></i> Mis Pedidos<br><br>"+ 
 					"Para pagar desde la Aplicación <br><br>"+
-					"<a class='btn btn-default blank_a' href='pedidos.html'>ir ahora</a>"
+					"<a class='btn btn-default blank_a' href='#' abrir='pedidos.html'>ir ahora</a>"
 					);
 			}else{
 				console.log("error");
