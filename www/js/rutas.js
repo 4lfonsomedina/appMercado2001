@@ -1,8 +1,3 @@
-document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
-    window.open = cordova.InAppBrowser.open;
-}
-
 $(document).ready(function() {
 
 	var path_=getPhoneGapPath();
@@ -31,7 +26,7 @@ $(document).ready(function() {
 		x.preventDefault();
 		if(!$(this).attr("disabled")){
 			$(".sombra_menu").click();
-	   		window.open($(this).attr('abrir'));
+	   		window.location.href = $(this).attr('abrir');
 		}else{
 			if($(this).attr("mensaje")!="0")
 				alert_2($(this).attr("mensaje"));
@@ -44,7 +39,7 @@ $(document).ready(function() {
 	//regresar a inicio
 	$(document).on("click",".menu_inicio",function(){
 		$(".splash").fadeIn(500,function(){
-			window.location ="index.html";
+			window.location.href ="index.html";
 		});
 		
 	})
@@ -59,7 +54,7 @@ $(document).ready(function() {
 	//cerrar ventanas emergentes
 	$(document).on("click",".cerrar_ventana",function(){
 		$(".splash").fadeIn(500,function(){
-			location.replace("index.html");
+			window.location.href = "index.html";
 		})
 	})
 
