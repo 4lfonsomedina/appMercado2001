@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	window = cordova.InAppBrowser;
 
 	var path_=getPhoneGapPath();
 	//alert(path_);
@@ -40,7 +41,7 @@ $(document).ready(function() {
 	//regresar a inicio
 	$(document).on("click",".menu_inicio",function(){
 		$(".splash").fadeIn(500,function(){
-			location.replace("index.html");
+			window.location.href = "index.html";
 		});
 		
 	})
@@ -55,7 +56,7 @@ $(document).ready(function() {
 	//cerrar ventanas emergentes
 	$(document).on("click",".cerrar_ventana",function(){
 		$(".splash").fadeIn(500,function(){
-			location.replace("index.html");
+			window.location.href = "index.html";
 		})
 	})
 
