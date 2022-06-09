@@ -27,7 +27,7 @@ $(document).ready(function() {
 		if(!$(this).attr("disabled")){
 			var el = $(this);
 			$(".sombra_menu").click();
-	   		window.open(el.attr('abrir'));
+	   		window.location = el.attr('abrir');
 		}else{
 			if($(this).attr("mensaje")!="0")
 				alert_2($(this).attr("mensaje"));
@@ -40,7 +40,7 @@ $(document).ready(function() {
 	//regresar a inicio
 	$(document).on("click",".menu_inicio",function(){
 		$(".splash").fadeIn(500,function(){
-			location.replace("index.html");
+			window.location ="index.html";
 		});
 		
 	})
