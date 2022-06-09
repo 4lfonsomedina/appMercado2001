@@ -1,3 +1,8 @@
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    window.open = cordova.InAppBrowser.open;
+}
+
 $(document).ready(function() {
 
 	var path_=getPhoneGapPath();
@@ -26,7 +31,7 @@ $(document).ready(function() {
 		x.preventDefault();
 		if(!$(this).attr("disabled")){
 			$(".sombra_menu").click();
-	   		window.location = $(this).attr('abrir');
+	   		window.open($(this).attr('abrir'));
 		}else{
 			if($(this).attr("mensaje")!="0")
 				alert_2($(this).attr("mensaje"));
