@@ -25,9 +25,8 @@ $(document).ready(function() {
 	$(document).on("click",".blank_a",function(x){
 		x.preventDefault();
 		if(!$(this).attr("disabled")){
-			var el = $(this);
 			$(".sombra_menu").click();
-	   		window.location = el.attr('abrir');
+	   		window.location = $(this).attr('abrir');
 		}else{
 			if($(this).attr("mensaje")!="0")
 				alert_2($(this).attr("mensaje"));
