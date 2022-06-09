@@ -27,10 +27,10 @@ $(document).ready(function() {
 			//$(".sombra_menu").click();
 	   		//window.location.href = $(this).attr('abrir');
 	   		var abrir = $(this).attr('abrir');
-	   		$("#contenido_global").hide(800,function(){
+	   		$("#contenido_global").fadeOut(800,function(){
 	   			$.post(abrir,function(r) {
 	   				$("#contenido_global").html(r);
-	   				$("#contenido_global").show(800);
+	   				$("#contenido_global").fadeIn(800);
 	   			});
 	   		})
 		}else{
@@ -44,10 +44,10 @@ $(document).ready(function() {
 	
 	//regresar a inicio
 	$(document).on("click",".menu_inicio",function(){
-		$("#contenido_global").hide(800,function(){
+		$("#contenido_global").fadeOut(800,function(){
 			$.post("dashboard.html",function(r) {
 	   			$("#contenido_global").html(r);
-	   			$("#contenido_global").show(800);
+	   			$("#contenido_global").fadeIn(800);
 	   		});
 		});
 		
@@ -62,10 +62,10 @@ $(document).ready(function() {
 
 	//cerrar ventanas emergentes
 	$(document).on("click",".cerrar_ventana",function(){
-		$("#contenido_global").hide(800,function(){
+		$("#contenido_global").fadeOut(800,function(){
 			$.post("dashboard.html",function(r) {
 	   			$("#contenido_global").html(r);
-	   			$("#contenido_global").show(800);
+	   			$("#contenido_global").fadeIn(800);
 	   		});
 		})
 	})

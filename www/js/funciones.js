@@ -628,10 +628,10 @@ function reducir_buscador(){
 	$(".producto_no_encontrado").fadeIn(100);
 }
 function regresar_inicio(){
-	$("#contenido_global").hide(800,function(){
+	$("#contenido_global").fadeOut(800,function(){
 		$.post("dashboard.html",function(r) {
    			$("#contenido_global").html(r);
-   			$("#contenido_global").show(800);
+   			$("#contenido_global").fadeIn(800);
    		});
 	})
 }
