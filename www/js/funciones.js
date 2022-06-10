@@ -19,6 +19,14 @@ function iniciar_app(){
 		});
 		*/
 }
+function regresar_inicio(){
+	$("#contenido_global").fadeOut(800,function(){
+		$.post("dashboard.html",function(r) {
+   			$("#contenido_global").html(r);
+   			$("#contenido_global").fadeIn(800);
+   		});
+	})
+}
 
 
 $(document).ready(function() {
@@ -627,14 +635,7 @@ function reducir_buscador(){
 	$('#contenedor_articulos').scrollTop(0);
 	$(".producto_no_encontrado").fadeIn(100);
 }
-function regresar_inicio(){
-	$("#contenido_global").fadeOut(800,function(){
-		$.post("dashboard.html",function(r) {
-   			$("#contenido_global").html(r);
-   			$("#contenido_global").fadeIn(800);
-   		});
-	})
-}
+
 
 
 /* inhabilitar boton de regreso */

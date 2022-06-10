@@ -168,7 +168,8 @@ $(document).on("click",".btn_enviar_pedido",function(){
 
 //envio finalizado
 $(document).on("click",".btn_aceptar",function(){
-	closeBrowser();
+	$('#modal_pedido_enviado').modal("hide");
+	regresar_inicio();
 })
 
 $(document).on("click",".li_paso",function(){
