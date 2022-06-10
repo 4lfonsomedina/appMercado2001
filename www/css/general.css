@@ -71,15 +71,17 @@
 .img_subdep{
 	text-align: center;
 	height: 150px;
+	margin-top: 20px;
 }
 .contenedor_departamento{
 	height: 190px;
 	width: 100%;
 	text-align: center;
-	 border-radius: 20px;
-	padding-top: 10px;
-	margin-top: 10px;
-	box-shadow: -5px 5px 3px 0px #2C2C2C;
+	border-radius: 8px;
+    padding-top: 10px;
+    margin-top: 10px;
+    box-shadow: -5px 5px 3px 0px #7e7e7e;
+    border: 1px solid #cfcece;
 	margin-bottom: 5px;
 }
 .contenedor_departamento:active {
@@ -102,17 +104,18 @@
 	border-radius: 20px;
 }
 .contenedor_subdepartamento{
-	border-radius: 20px;
-	padding-top: 10px;
-	margin-top: 10px;
-	box-shadow: -5px 5px 3px 0px #2C2C2C;
+	border-radius: 8px;
+    padding-top: 10px;
+    margin-top: 20px;
+    box-shadow: -5px 5px 3px 0px #7e7e7e;
+    border: 1px solid #cfcece;
 }
 .contenedor_subdepartamento:active {
   box-shadow: 0px 0px 0px 0px;
   transform: translateY(2px);
 }
 .contenedor_subdepartamento img{
-	border-radius: 20px;
+	border-radius: 50px;
 }
 .cerrar_ventana,
 .cerrar_ventana:hover,

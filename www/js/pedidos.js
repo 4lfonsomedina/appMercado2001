@@ -96,7 +96,7 @@
 			console.log($(this).attr('id_carrito'));
 			$.post(url_api+"re_ordenar", {id_carrito:$(this).attr('id_carrito')}, function(r) {
 				alert_2("Pedido agregado a su carrito actual");
-				closeBrowser();
+				regresar_inicio();
 			});
 		})
 
