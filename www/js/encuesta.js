@@ -12,12 +12,12 @@ function verificacion_encuesta(id_cliente){
 $(document).ready(function() {
 
 
-	$(".iniciar_encuesta1").click(function() {
+	$(document).on("click",".iniciar_encuesta1",function() {
 		$("#Modal_encuesta").modal('hide');
 		$("#Modal_encuesta_1").modal({backdrop: 'static', keyboard: false});
 	});
 	//botones de siguiente
-	$(".enc_btn_siguiente").click(function() {
+	$(document).on("click",".enc_btn_siguiente",function() {
 		var activo = 1;
 		$(".encuesta1").each(function() {
 			if($(this).attr('activo')=='1'){
@@ -35,7 +35,7 @@ $(document).ready(function() {
 		actualizar_botones_encuesta1();
 	});
 
-	$(".enc_btn_anterior").click(function() {
+	$(document).on("click",".enc_btn_anterior",function() {
 		var activo = 1;
 		$(".encuesta1").each(function() {
 			if($(this).attr('activo')=='1'){
@@ -52,7 +52,7 @@ $(document).ready(function() {
 		})
 		actualizar_botones_encuesta1();
 	});
-	$(".enc_btn_finalizar").click(function() {
+	$(document).on("click",".enc_btn_finalizar",function() {
 		$.post(url_api+'guardar_encuesta', $("#contenedor_encuesta").serialize(), function(r) {
 		});
 		$(".encuesta1").hide();
@@ -68,7 +68,7 @@ $(document).ready(function() {
 	
 
 	//funcion de estrellas
-	$(".td_star").click(function(){
+	$(document).on("click",".td_star",function(){
 		var valor = $(this).find('i').attr('valor');
 		var pregunta = $(this).find('i').attr('pregunta');
 		var check = $(this).find("input");
