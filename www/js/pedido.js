@@ -22,10 +22,25 @@ function cargar_datos() {
 		verificar_ubicacion();
 		mostrar_tabla();
 	})
+
+	$.post(url_api+'get_carrito_activo',{id_cliente:sesion_local.getItem("FerbisAPP_id")},function(r){
+		var productos_carrito = jQuery.parseJSON(r);
+		$('.pedido_articulos').html(productos_carrito.length);
+		$('.pedido_articulos_input').val(productos_carrito.length);
+		$(".pedido_id_carrito").val(productos_carrito[0].id_carrito);
+		var total=0;
+		$.each(productos_carrito, function( i, prod ) {
+			total+=parseFloat(prod.cantidad)*parseFloat(prod.precio);
+		});
+		$('.pedido_total').html(parseFloat(total).toFixed(2));
+		$('.pedido_total_input').val(parseFloat(total).toFixed(2));
+		mostrar_tabla();
+		$(".contenedor_resumen_pedido").html(string_carrito(r));
+	});
 }
 
 //al cambiar la fecha de entrega
-$("#fecha_pedido").change(function(){
+$(document).on("change","#fecha_pedido",function(){
 	calcular_envio($(".pedido_id_sucursal").val());
 })
 
@@ -196,20 +211,7 @@ function actualizar_paso3(){
 }
 
 
-$.post(url_api+'get_carrito_activo',{id_cliente:sesion_local.getItem("FerbisAPP_id")},function(r){
-	var productos_carrito = jQuery.parseJSON(r);
-	$('.pedido_articulos').html(productos_carrito.length);
-	$('.pedido_articulos_input').val(productos_carrito.length);
-	$(".pedido_id_carrito").val(productos_carrito[0].id_carrito);
-	var total=0;
-	$.each(productos_carrito, function( i, prod ) {
-		total+=parseFloat(prod.cantidad)*parseFloat(prod.precio);
-	});
-	$('.pedido_total').html(parseFloat(total).toFixed(2));
-	$('.pedido_total_input').val(parseFloat(total).toFixed(2));
-	mostrar_tabla();
-	$(".contenedor_resumen_pedido").html(string_carrito(r));
-});
+
 
 
 function objectifyForm(formArray) {//serialize data function

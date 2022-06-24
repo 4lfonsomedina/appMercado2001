@@ -10,9 +10,12 @@
 
     <script>
         jQuery(document).ready(function($) {
-            $.post('dashboard.html', function(r) {
-                $("#contenido_global").html(r);
-            });
+            $("#contenido_global").fadeOut(1200,function(){
+                $.post("dashboard.html",function(r) {
+                    $("#contenido_global").html(r);
+                    $("#contenido_global").fadeIn(1200);
+                });
+            })
         });
     </script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
@@ -22,4 +25,8 @@
     <script type="text/javascript" src="js/funciones.js"></script>   
     <script type="text/javascript" src="js/session.js"></script>
     <script type="text/javascript" src="js/encuesta.js"></script>
+    <script type="text/javascript" src="js/cuenta.js"></script>
+    <script type="text/javascript" src="js/pedido.js"></script>
+    <script type="text/javascript" src="js/pedidos.js"></script>
+    <script type="text/javascript" src="js/tarjetas_API.js"></script>
 </footer>

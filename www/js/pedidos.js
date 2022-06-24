@@ -1,6 +1,8 @@
 	$(document).ready(function() {
-		$(".contenedor_pedidos").html(loader());
 		
+		
+		function ini_pedidos(){
+			$(".contenedor_pedidos").html(loader());
 		$.post(url_api+"get_carritos",{id:sesion_local.getItem("FerbisAPP_id")},function(r){
 			var string_contenido="";
 			if(jQuery.parseJSON(r).length>0){
@@ -61,6 +63,7 @@
 			}
 			console.log(r);
 		})
+		}
 
 		$(document).on("click",".pedido_row_a",function(){
 			//$(".modal_pedido_fecha").html($(this).attr('fecha'));
