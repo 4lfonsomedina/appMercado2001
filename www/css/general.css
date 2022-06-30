@@ -101,7 +101,8 @@
 }
 .contenedor_departamento div img{
 	width: 100%;
-	border-radius: 20px;
+	max-height: 120px;
+	border-radius: 8px;
 }
 .contenedor_subdepartamento{
 	border-radius: 8px;
