@@ -223,9 +223,6 @@
 	width: 100%; 
 	margin: 0px;
 }
-.modal-content{
-	Z
-}
 .btn{
 	width: 100%;
 }
@@ -320,7 +317,7 @@
 #contenedor_articulos{
 	border-top:solid 1px #E8E8E8;
 	border-bottom:solid 1px #E8E8E8;
-	height: 83vh; 
+	height: 82vh; 
 	width: 100%; 
 	overflow-y: auto;
 	background-color: white;
@@ -329,6 +326,7 @@
 	border-top:solid 1px #E8E8E8;
 	border-bottom:solid 1px #E8E8E8;
 	width: 100%; 
+	height: 100vh; 
 	overflow-y: auto;
 	background-color: white;
 }
