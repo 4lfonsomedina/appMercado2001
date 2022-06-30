@@ -6,6 +6,7 @@ function iniciar_app(){
 		actualizar_burbuja_carrito();
 		actualizar_burbuja_notificaciones();
 		get_departamentos_inicio();
+		verificar_session();
 		/*
 		$.post('contenido/banner.html', function(resp_json){
 			$("#contenedor_articulos").html(resp_json);

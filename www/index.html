@@ -1,5 +1,24 @@
+
 <!DOCTYPE html>
-<div id="contenido_global"></div>
+<html>
+<!-- CABECERA -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="connect-src *;">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link rel="img/logo.png">
+    <title>APPMercado2001</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/general.css">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+</head>
+
+<!-- INICIO BODY -->
+<body>
+<div id="contenido_global" ></div>
+</body>
 <footer>
     <script type="text/javascript" src="js/jquery.js"></script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -10,12 +29,12 @@
 
     <script>
         jQuery(document).ready(function($) {
-            $("#contenido_global").fadeOut(1200,function(){
-                $.post("dashboard.html",function(r) {
-                    $("#contenido_global").html(r);
-                    $("#contenido_global").fadeIn(1200);
-                });
-            })
+            $("#contenido_global").fadeOut(500,"swing",function(){
+            $.post("dashboard.html",function(r) {
+                $("#contenido_global").html(r);
+                $("#contenido_global").slideDown(1000);
+            });
+        });
         });
     </script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
@@ -29,4 +48,6 @@
     <script type="text/javascript" src="js/pedido.js"></script>
     <script type="text/javascript" src="js/pedidos.js"></script>
     <script type="text/javascript" src="js/tarjetas_API.js"></script>
+    <script type="text/javascript" src="js/tiendas.js"></script>
 </footer>
+</html>

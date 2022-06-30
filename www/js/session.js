@@ -2,7 +2,7 @@ var sesion_local = window.localStorage;
 
 
 
-$(document).ready(function() {
+
 	//sesion_local.clear();
 	
 
@@ -61,15 +61,18 @@ $(document).ready(function() {
 	//evitar que se pueda ocultar el modal de bienvenida
 
 	//verificar si el cliente esta dado de alta
-	setTimeout(function(){
-		if(sesion_local.getItem("FerbisAPP_id")!=null){
-		actualizar_session(sesion_local.getItem("FerbisAPP_id"));
-		}else{
-			$('#modal_bienvenida').modal({backdrop: 'static', keyboard: false});
-		}
-	}, 2000);
+	function verificar_session(){
+		setTimeout(function(){
+			if(sesion_local.getItem("FerbisAPP_id")!=null){
+			actualizar_session(sesion_local.getItem("FerbisAPP_id"));
+			}else{
+				$('#modal_bienvenida').modal({backdrop: 'static', keyboard: false});
+			}
+		}, 2000);
+	}
 	
-
+	
+$(document).ready(function() {
 	//Captura de nombre
 	$(document).on("click",".btn_bienvenida",function(){
 		if($(".modal_bienvenida_nombre").val()!=""){

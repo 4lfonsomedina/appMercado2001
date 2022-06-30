@@ -223,6 +223,9 @@
 	width: 100%; 
 	margin: 0px;
 }
+.modal-content{
+	Z
+}
 .btn{
 	width: 100%;
 }
@@ -318,6 +321,13 @@
 	border-top:solid 1px #E8E8E8;
 	border-bottom:solid 1px #E8E8E8;
 	height: 83vh; 
+	width: 100%; 
+	overflow-y: auto;
+	background-color: white;
+}
+#contenido_global{
+	border-top:solid 1px #E8E8E8;
+	border-bottom:solid 1px #E8E8E8;
 	width: 100%; 
 	overflow-y: auto;
 	background-color: white;
