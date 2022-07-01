@@ -16,7 +16,7 @@ function cargar_mapas(){
       zoom: 17,
       center: myLatLng
     });
-    var marker = new google.maps.Marker({
+    var marker = new google.maps.Marker({git add
       draggable: false,
       animation: google.maps.Animation.DROP,
       position: myLatLng,
@@ -25,8 +25,8 @@ function cargar_mapas(){
       title: 'Ferbis Brasil'
     });	
 
-    //mapa San Marcos 32.633541, -115.493229
-	myLatLng = { lat: 32.655015 , lng: -115.437245 };
+    //mapa Zaragoza 32.66114549695429, -115.4615843854909
+	myLatLng = { lat: 32.66114549695429 , lng: -115.4615843854909 };
 	$(".cuenta_lat").val(myLatLng.lat);
 	$(".cuenta_lon").val(myLatLng.lng);
 	
@@ -43,8 +43,8 @@ function cargar_mapas(){
       title: 'Ferbis Brasil'
     });	
 
-    //mapa Gastro 32.656351, -115.411593
-	myLatLng = { lat: 32.655015 , lng: -115.437245 };
+    //mapa Rio presidio 32.6477052545879, -115.42409109252894
+	myLatLng = { lat: 32.6477052545879 , lng: -115.42409109252894 };
 	$(".cuenta_lat").val(myLatLng.lat);
 	$(".cuenta_lon").val(myLatLng.lng);
 	
