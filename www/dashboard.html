@@ -669,25 +669,11 @@
 
 
 <script type="text/javascript"> 
-
-	setTimeout(function(){
-		if( /iPhone|iPad/i.test(navigator.userAgent) ) {
-	   console.log('IOS');
-	}
-	if(/Android/i.test(navigator.userAgent)){
-		console.log('ANDROID');
-	}
-	
-
-	//quitar slash
-	//deshabilitar zoom
-	// stop ios bounce and zoom 
-	document.ontouchmove = event => {event.preventDefault();}; 
-	//variables de inicio para las funciones
+		
 	iniciar_app();
 
 
-	},1000); 
+
 
 
 

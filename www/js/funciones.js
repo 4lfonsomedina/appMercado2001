@@ -20,14 +20,7 @@ function iniciar_app(){
 		});
 		*/
 }
-function regresar_inicio(){
-	$("#contenido_global").fadeOut(800,function(){
-		$.post("dashboard.html",function(r) {
-   			$("#contenido_global").html(r);
-   			$("#contenido_global").fadeIn(800);
-   		});
-	})
-}
+
 
 
 $(document).ready(function() {
