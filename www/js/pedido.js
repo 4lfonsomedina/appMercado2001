@@ -72,8 +72,8 @@ function sucursal_cercana(){
 		})
 }
 function mostrar_tabla(){
-	if(parseFloat($('.pedido_total').html())<200&&$('input:radio[name=servicio]:checked').val()==1){
-		alert_2("El total del pedido no alcanza el mínimo de $200.00 para el servicio de envío a domicilio");
+	if(parseFloat($('.pedido_total').html())<350&&$('input:radio[name=servicio]:checked').val()==1){
+		alert_2("El total del pedido no alcanza el mínimo de $350.00 para el servicio de envío a domicilio");
 		$('#scheck2').click();
 		return;
 	}
@@ -204,7 +204,7 @@ function actualizar_paso3(){
 	$(".p3_nombre").html(pedido.nombre);
 	$(".p3_telefono").html(pedido.telefono);
 	$(".p3_frecuente").html(pedido.numero);
-	var servicio = "A domicilio"; if(pedido.servicio!=1){ servicio = "Paso por el"; }
+	var servicio = "A domicilio +$25.00"; if(pedido.servicio!=1){ servicio = "Paso por el"; }
 	$(".p3_servicio").html(servicio+" <b>"+$("#fecha_pedido").val()+" "+formato_12hrs($("#select_horas_disponibles").val())+"</b>");
 	$(".p3_direccion").html(pedido.dir_calle+" "+pedido.dir_numero1+" "+pedido.dir_numero1+","+pedido.dir_colonia);
 	$(".p3_referencia").html(pedido.referencia);

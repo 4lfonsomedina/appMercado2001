@@ -2,11 +2,12 @@ jQuery(document).ready(function($) {
   $(document).on("click",".recargar_mapa",function(){
     setTimeout(function() {
       cargar_mapas();
-    }, 300);
+    }, 1000);
     
   })
 });
 function cargar_mapas(){
+  setTimeout(function() {
 	//mapa prohogar 32.655015106785555, -115.43724560600889
 	myLatLng = { lat: 32.655015 , lng: -115.437245 };
 	$(".cuenta_lat").val(myLatLng.lat);
@@ -16,7 +17,7 @@ function cargar_mapas(){
       zoom: 17,
       center: myLatLng
     });
-    var marker = new google.maps.Marker({git add
+    var marker = new google.maps.Marker({
       draggable: false,
       animation: google.maps.Animation.DROP,
       position: myLatLng,
@@ -60,4 +61,5 @@ function cargar_mapas(){
       icon: 'img/map_icon.png',
       title: 'Ferbis Brasil'
     });	
+  },3000);
 }
