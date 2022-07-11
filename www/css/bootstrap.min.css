@@ -27,6 +27,8 @@ body {
     touch-action: none;
     margin: 0;
     height: 100vh;
+    padding-top: constant(safe-area-inset-top);
+    padding-top: env(safe-area-inset-top);
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
     display: block
