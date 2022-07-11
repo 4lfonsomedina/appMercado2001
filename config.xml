@@ -44,12 +44,6 @@
         <edit-config file="*-Info.plist" mode="overwrite" target="NSPhotoLibraryUsageDescription">
             <string>La Aplicación necesita permiso de memoria para almacenar datos de sesión.</string>
         </edit-config>
-        <edit-config file="*-Info.plist" target="UIStatusBarHidden" mode="merge">
-            <true/>
-        </edit-config>
-        <edit-config file="*-Info.plist" target="UIViewControllerBasedStatusBarAppearance" mode="merge">
-            <false/>
-        </edit-config>
         <icon height="57" src="www/img/icon/ios/icon.png" width="57" />
         <icon height="144" src="www/img/icon/ios/icon-72@2x.png" width="144" />
         <icon height="72" src="www/img/icon/ios/icon-72.png" width="72" />
