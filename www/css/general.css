@@ -166,7 +166,7 @@
 	/*background-color: #cc0000; */
 	background-color: #ffffff;
 	padding: 10px;
-	height: 10vh;
+	height: 10%;
 	color: white;
 	display: flex;
     align-items: center;
@@ -177,7 +177,7 @@
 	/*background-color: #cc0000; */
 	background-color: #fcc23f;
 	padding: 10px;
-	height: 8vh;
+	height: 8%;
 	color: white;
 	display: flex;
     align-items: center;
@@ -206,18 +206,18 @@
 }
 .contenido_emergente{
 	background-color: #f3f3f3;
-	height: 90vh;
+	height: 90%;
 	overflow-y: auto;
 }
 .menu_buscar{
-	height: 8vh;
+	height: 8%;
 	padding-top: 4px;
 	display: flex;
     align-items: center;
     justify-content: center;
 }
 .menu_dep{
-	height: 15vh; 
+	height: 15%; 
 	overflow-x: auto;
 }
 .row,body{
@@ -295,7 +295,7 @@
 	line-height:120%;
 }
 .img_dep img{
-	height: 10vh;
+	height: 10%;
 }
 .dep_001{background-color: #FF9700; }
 .dep_002{background-color: #D00000 }
@@ -318,7 +318,7 @@
 #contenedor_articulos{
 	border-top:solid 1px #E8E8E8;
 	border-bottom:solid 1px #E8E8E8;
-	height: 82vh; 
+	height: 82%; 
 	width: 100%; 
 	overflow-y: scroll; -webkit-overflow-scrolling: touch;
 	background-color: white;
@@ -329,7 +329,7 @@
 	*/
 
 	width: 100%; 
-	height: 100vh; 
+	height: 100%; 
 	overflow-y: auto;
 	background-color: white;
 }
@@ -450,7 +450,7 @@
 	left:0px;
 	background-color:white;
 	width: 80%;
-	height: 100vh;
+	height: 100%;
 	z-index: 3;
 	border-top-right-radius: 7px;
 }
@@ -479,7 +479,7 @@
 	background-color:black;
 	opacity:.5;
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	z-index: 2;
 }
 .datos_cliente{
@@ -491,7 +491,7 @@
 	right:0px;
 	background-color:white;
 	width: 80%;
-	height: 100vh;
+	height: 100%;
 	z-index: 3;
 	border-top-left-radius: 7px;
 }
@@ -540,14 +540,14 @@
 }
 .contenido_carrito{
 	border: solid 1px #E8E8E8;
-	height: 73vh;
+	height: 73%;
 	overflow-y: auto;
 	padding-top: 10px;
 }
 .div_procesar_pedido{
 	text-align: center;
 	font-weight: bold;
-	height: 17vh;
+	height: 17%;
 	padding: 5px;
 }
 .div_procesar_pedido_contenido{
@@ -715,11 +715,11 @@
 	text-align: center;
 }
 .contenedor_pedido{
-	height: 80vh;
+	height: 80%;
 }
 .contenedor_pedido_btn{
 	background-color: #f3f3f3;
-	height: 10vh;
+	height: 10%;
 	z-index: 4;
 }
 .contenedor_pedido_btn button{
@@ -749,7 +749,7 @@
     bottom: 5px;
 }
 .contenedor_resumen_pedido{
-	height: 55vh;
+	height: 55%;
 	border-bottom:solid 1px #E8E8E8;
 	overflow-y: auto;
 }
