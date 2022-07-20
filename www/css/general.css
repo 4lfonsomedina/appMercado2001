@@ -782,5 +782,10 @@
     background-color: #0b76cc;
     color: white;
 }
+.espacio_notch{
+	background-color: #717171;
+	height: constant(safe-area-inset-top);
+	height: env(safe-area-inset-top);
+}
 
 
