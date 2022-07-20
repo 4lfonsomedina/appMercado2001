@@ -784,8 +784,8 @@
 }
 .espacio_notch{
 	background-color: #717171;
-	height: constant(safe-area-inset-top);
-	height: env(safe-area-inset-top);
+    padding-top: constant(safe-area-inset-top);
+    padding-top: env(safe-area-inset-top);
 }
 
 
