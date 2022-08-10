@@ -41,7 +41,8 @@
 .btn_paso{
 	position:absolute;
 	left: 0px;                  
-    bottom:0px;
+    bottom:constant(safe-area-inset-bottom);
+	bottom:env(safe-area-inset-bottom);
     width: 100%;
 }
 .td_star{
@@ -354,7 +355,8 @@
 }
 .boton_guardar button{
 	position: absolute;
-	bottom: 0px;
+	bottom: constant(safe-area-inset-bottom);
+	bottom: env(safe-area-inset-bottom);
 	width: 100%;
 }
 .img_art{
@@ -446,11 +448,13 @@
 }
 .menu_lateral_izq{
 	position: absolute;
-	top:0px;
+	top:constant(safe-area-inset-top);
+	top:env(safe-area-inset-top);
 	left:0px;
 	background-color:white;
 	width: 80%;
-	height: 100%;
+	height: calc(100% - constant(safe-area-inset-top) );
+	height: calc(100% - env(safe-area-inset-top) );
 	z-index: 3;
 	border-top-right-radius: 7px;
 }
@@ -465,7 +469,8 @@
 }
 .menu_lateral_cliente i{
 	position:absolute;
-	top:20px;
+	top:calc(20px + (safe-area-inset-top));
+	top:calc(20px + env(safe-area-inset-top));
 }
 .datos_cliente{
     margin-left: 60px;
@@ -487,11 +492,13 @@
 }
 .menu_lateral_der{
 	position: absolute;
-	top:0px;
+	top:constant(safe-area-inset-top);
+	top:env(safe-area-inset-top);
 	right:0px;
 	background-color:white;
 	width: 80%;
-	height: 100%;
+	height: calc(100% - constant(safe-area-inset-top) );
+	height: calc(100% - env(safe-area-inset-top) );
 	z-index: 3;
 	border-top-left-radius: 7px;
 }
@@ -552,9 +559,10 @@
 }
 .div_procesar_pedido_contenido{
 	position: absolute;
-	bottom: 10px;
+	bottom: calc(10px+constant(safe-area-inset-bottom));
+	bottom: calc(10px+env(safe-area-inset-bottom));
 	left:2%;
-	width: 96%;
+	width: 94%;
 }
 .modal-body{
 	padding-top: 0px;
