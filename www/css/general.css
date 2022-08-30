@@ -792,8 +792,10 @@
 }
 .espacio_notch{
 	background-color: #000000;
+	margin-top: 20px;
     padding-top: constant(safe-area-inset-top);
     padding-top: env(safe-area-inset-top);
+
 }
 
 
