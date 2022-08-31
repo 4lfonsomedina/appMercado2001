@@ -25,7 +25,7 @@ body {
     background-repeat: no-repeat !important;
     background-position: 50% 50% !important;
     touch-action: none;
-    height: calc(100vh - 25px);
+    height: calc(100vh - 30px);
     height: calc(100vh - constant(safe-area-inset-top));
     /*height: calc(100vh - env(safe-area-inset-top));*/
 }

@@ -252,7 +252,7 @@
     right: 16px;
     /* color: white; */
     /* border-radius: 15px; */
-    padding: 18px 0px 18px 0px;
+    padding: 8px 0px 8px 0px;
 }
 .fa-pencil{
 	position: absolute;
@@ -448,7 +448,7 @@
 }
 .menu_lateral_izq{
 	position: absolute;
-	top:  25px;
+	top:  30px;
 	top:constant(safe-area-inset-top);
 	/*top:env(safe-area-inset-top);*/
 	left:0px;
@@ -471,8 +471,7 @@
 }
 .menu_lateral_cliente i{
 	position:absolute;
-	top:calc(20px + (safe-area-inset-top));
-	top:calc(20px + env(safe-area-inset-top));
+	top:calc(20px + constant(safe-area-inset-top));
 }
 .datos_cliente{
     margin-left: 60px;
@@ -494,7 +493,7 @@
 }
 .menu_lateral_der{
 	position: absolute;
-	top:  25px;
+	top:  30px;
 	top:constant(safe-area-inset-top);
 	/*top:env(safe-area-inset-top);*/
 	right:0px;
@@ -797,7 +796,7 @@
 }
 .espacio_notch{
 	background-color: #000000;
-	margin-top: 25px;
+	padding-top: 30px;
     padding-top: constant(safe-area-inset-top);
     /*padding-top: env(safe-area-inset-top);*/
 }
