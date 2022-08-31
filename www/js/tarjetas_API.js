@@ -134,7 +134,7 @@ function get_t(tipo){
           		}
           		
 			})
-			trs+="<a href='#' class='btn btn-primary btn_alta_tarjeta' style='padding: 8px 14px;border-radius: 15px; width: 100%' tipo='2'>"+
+			trs+="<a  class='btn btn-primary btn_alta_tarjeta' style='padding: 8px 14px;border-radius: 15px; width: 100%' tipo='2'>"+
                           "Agregar Nueva Tarjeta <i class='fa fa-plus' aria-hidden='true' ></i></a>"+
                     "</a><br>";
 			$(".tabla_ttt").html(trs);

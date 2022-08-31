@@ -2,11 +2,10 @@ $(document).ready(function() {
 
 
 	if (window.history && window.history.pushState) {
-
 	    window.history.pushState('forward', null, './#forward');
-
-	    $(window).on('popstate', function() {
-	      regresar_inicio();
+	    $(window).on('popstate', function(e) {
+	    	//console.log(e);
+	    	regresar_inicio()
 	    });
 
 	  }
@@ -108,10 +107,7 @@ $(document).ready(function() {
 	}
 });
 
-//funcion phonegap para cerrar ventanas
-	function closeBrowser(){
-		window.history.go(-2);
-	}
+
 	function getPhoneGapPath() {
 	   var path = window.location.pathname;
 	   path = path.substr( path, path.length - 10 );
