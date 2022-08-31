@@ -1,5 +1,17 @@
 $(document).ready(function() {
 
+
+	if (window.history && window.history.pushState) {
+
+	    window.history.pushState('forward', null, './#forward');
+
+	    $(window).on('popstate', function() {
+	      regresar_inicio();
+	    });
+
+	  }
+
+
 	var path_=getPhoneGapPath();
 	//alert(path_);
 	//carcar contenidos de los div_contenido
@@ -120,7 +132,3 @@ $(document).ready(function() {
             });
         });
 	}
-	document.addEventListener("backbutton", function (e) {
-    	e.preventDefault();
-    	regresar_inicio();
-	}, false);
