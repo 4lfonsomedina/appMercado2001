@@ -28,7 +28,7 @@ function ini_pedidos(){
 					if(pedido.pago_status=='2'){
 						leyenda_pago="<div style='border-radius:5px; font-weight:bold; background-color:#4caf50; color:white'>$"+pedido.pago_total+"<br> Pagado</div>";}
 
-					string_contenido+='<a href="#" class="pedido_row_a" id_carrito="'+pedido.id_carrito+'" '+
+					string_contenido+='<a  class="pedido_row_a" id_carrito="'+pedido.id_carrito+'" '+
 					'fecha="'+pedido.fecha_entrega+'" '+
 					'status="'+status_desc+'" '+
 					'pedido="'+pedido.id_pedido+'" '+

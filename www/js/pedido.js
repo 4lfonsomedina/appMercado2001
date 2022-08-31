@@ -252,7 +252,7 @@ function string_carrito(string_json){
 		}
 		if(total=="0.00"){total="";}
 		var asado=""; if(prod.asado=='1'){ asado='<i class="fa fa-fire ico_asado" aria-hidden="true"></i>';}
-		string_ret+="<a href='#' class='articulo_carrito' "+
+		string_ret+="<a  class='articulo_carrito' "+
 		"id_carrito_det='"+prod.id_carrito_det+"' "+
 		"producto='"+prod.producto+"' "+
 		"departamento='"+prod.departamento+"' "+

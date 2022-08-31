@@ -40,8 +40,8 @@ $(document).ready(function() {
 			
 				var string="<div class='contenedor_banner'>";
 				//string+="<div class='img_banner'><img src='img/banner"+temp_dep+".png' width='100%' class='banner_dep'></div>";
-				string+="<div class='col-xs-12 btns_navegacion'><div class='col-xs-6'><a href='#' class='regresar_link back_click'>< Regresar</a></div>";
-				string+="<div class='col-xs-6' style='text-align:right'><a href='#' class='ver_todo_link' dep='"+temp_dep+"'>Ver todo</a></div></div>";
+				string+="<div class='col-xs-12 btns_navegacion'><div class='col-xs-6'><a  class='regresar_link back_click'>< Regresar</a></div>";
+				string+="<div class='col-xs-6' style='text-align:right'><a  class='ver_todo_link' dep='"+temp_dep+"'>Ver todo</a></div></div>";
 				string+="<div class='contenedor_subdepartamentos'>"
 				$.each(jQuery.parseJSON(r), function( i, subdep ) {
 					string+=construir_subdepartamento(subdep.id_departamento,subdep.id_subdepartamento,subdep.imagen,subdep.nombre_subdepartamento,subdep.color,subdep.color2);
@@ -509,7 +509,7 @@ $(document).on("click",".btn_modal_guardar_e", function(){
 			if(total=="0.00"){total="";}
 			var asado=""; if(prod.asado=='1'){ asado='<i class="fa fa-fire ico_asado" aria-hidden="true"></i>';}
 
-			string_ret+="<div class='articulo_carrito_drag'><a href='#' class='articulo_carrito' "+
+			string_ret+="<div class='articulo_carrito_drag'><a  class='articulo_carrito' "+
 							"id_carrito_det='"+prod.id_carrito_det+"' "+
 							"producto='"+prod.producto+"' "+
 							"departamento='"+prod.departamento+"' "+
@@ -580,7 +580,7 @@ function get_departamentos_inicio(){
 	}).fail(function(error) { alert_2("Error de conexión...");  console.log(error.responseJSON); });
 }
 function construir_departamento(id_departamento,descripcion,imagen,color,color2){
-	return "<div class='col-xs-6' ><a href='#' class='img_dep' dep='"+id_departamento+"' nombre='"+descripcion+"'>"+
+	return "<div class='col-xs-6' ><a  class='img_dep' dep='"+id_departamento+"' nombre='"+descripcion+"'>"+
             "<div class='contenedor_departamento' style='background-color: "+color+";'>"+
                 "<p style='color:"+color2+"'>"+descripcion+"</p>"+
                 "<div>"+
