@@ -219,7 +219,22 @@ function objectifyForm(formArray) {//serialize data function
 	return returnArray;
 }
 		
-$(document).on("click",".pedido_radio",function(){ reset_fecha(); mostrar_tabla();})
+$(document).on("click",".pedido_radio",function(){ 
+
+	$(".pedido_radio_div").removeClass('select_tipo_pedido');
+	if($(this).is(':checked')){
+		console.log("radio seleccionado");
+		$(this).parent('div').parent('label').parent('div').addClass('select_tipo_pedido');
+	}else{
+
+	}
+
+
+	reset_fecha(); 
+	mostrar_tabla();
+
+
+})
 		
 function string_carrito(string_json){
 	var string_ret="";

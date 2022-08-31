@@ -57,7 +57,7 @@
     color: white;
     position: fixed;
     left: 0px;
-    bottom: 15%;
+    bottom: 10%;
     z-index: 1;
     box-shadow: 1px 1px 4px rgb(0 0 0 / 40%);
     width: 150px;
@@ -800,7 +800,10 @@
 	margin-top: 25px;
     padding-top: constant(safe-area-inset-top);
     /*padding-top: env(safe-area-inset-top);*/
-
+}
+.select_tipo_pedido{
+	background-color: #0b76cc;
+    color: white;
 }
 
 

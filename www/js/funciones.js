@@ -167,8 +167,8 @@ $(document).ready(function() {
 
 		$(".fyv_asado").hide(500);
 		//etiquetas
-		if($(this).attr('departamento')=='005'||$(this).attr('departamento')=='002'){
-			$(".row_asado").show();
+		if($(this).attr('departamento')=='2'||$(this).attr('departamento')=='9'){
+			//$(".row_asado").show();
 			if($(this).attr('unidad')=='KG'){
 				$(".unidad_modal").html("<div class='col-xs-4'></div><div class='col-xs-4'>"+
 				"<select name='unidad' class='form-control cambio_unidad' style='text-align-last:center;' precio_kg='"+parseFloat($(this).attr('precio')).toFixed(2)+"' precio='"+(parseFloat($(this).attr('precio'))*parseFloat($(this).attr('peso_promedio'))).toFixed(2)+"'>"+
@@ -379,7 +379,7 @@ $(document).on("click",".articulo_carrito",function(){
 	$(".contenedor_menu_lateral_der").hide(300);
 	
 
-	if($(this).attr('departamento')=='005'||$(this).attr('departamento')=='002'){
+	if($(this).attr('departamento')=='2'||$(this).attr('departamento')=='9'){
 		var precio_kg=parseFloat($(this).attr('precio')).toFixed(2);
 		var precio_pza=(parseFloat($(this).attr('precio'))*parseFloat($(this).attr('peso_promedio'))).toFixed(2);
 		if($(this).attr('unidad')=='PZA'){
@@ -388,7 +388,7 @@ $(document).on("click",".articulo_carrito",function(){
 		}
 
 
-		$(".row_asado").show();
+		//$(".row_asado").show();
 		$(".unidad_modal_e").html("<div class='col-xs-4'></div><div class='col-xs-4'>"+
 			"<select name='unidad' class='form-control cambio_unidad' style='text-align-last:center;' precio_kg='"+precio_kg+"' precio='"+precio_pza+"'>"+
 			"<option value='KG'>KG</option>"+
