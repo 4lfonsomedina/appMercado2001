@@ -120,3 +120,7 @@ $(document).ready(function() {
             });
         });
 	}
+	document.addEventListener("backbutton", function (e) {
+    	e.preventDefault();
+    	regresar_inicio();
+	}, false);
