@@ -270,9 +270,11 @@ $(document).ready(function() {
 
 //functiones para abrir menu lateral
 	$(document).on("click",".abrir_menu_lateral",function(){
+		$(".contenedor_menu_lateral_der").hide(300);
 		$(".contenedor_menu_lateral_izq").show(300);
 	})
 	$(document).on("click",".abrir_menu_lateral_der",function(){
+		$(".contenedor_menu_lateral_izq").hide(300);
 		$(".contenedor_menu_lateral_der").show(300);
 		$(".div_procesar_pedido").hide();
 		$(".contenido_carrito").html(loader());
