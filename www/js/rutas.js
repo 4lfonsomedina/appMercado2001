@@ -1,11 +1,15 @@
 $(document).ready(function() {
 
+	$(document).on("click","a",function(){
+		console.log("a");
+        window.history.pushState('forward', null, './#forward');
+    });
 
 	if (window.history && window.history.pushState) {
-	    window.history.pushState('forward', null, './#forward');
 	    $(window).on('popstate', function(e) {
-	    	//console.log(e);
-	    	regresar_inicio()
+	    	e.preventDefault();
+	    	console.log(window.location.pathname);
+	    	regresar_inicio();
 	    });
 
 	  }
@@ -42,7 +46,7 @@ $(document).ready(function() {
 	   		
 	   		$("#contenido_global").fadeOut(500,"swing",function(){
 	   			$.post(abrir,function(r) {
-
+	   				window.history.pushState('forward', null, './#forward');
 	   				$("#contenido_global").html(r);
 					setTimeout(function() {
                         $("#contenido_global").slideDown(500);
