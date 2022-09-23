@@ -122,6 +122,7 @@ $(document).ready(function() {
 
 
 	function regresar_inicio(){
+		$('.modal').modal('hide');
 		$("#contenido_global").fadeOut(500,"swing",function(){
             $.post("dashboard.html",function(r) {
                 $("#contenido_global").html(r);
