@@ -578,14 +578,23 @@ function get_departamentos_inicio(){
 	$.post(url_api+'get_departamentos',{id_cliente:sesion_local.getItem("FerbisAPP_id")},function(r){
 		var deps="";
 		$.each(jQuery.parseJSON(r), function(index, dep) {
-			 deps+=construir_departamento(dep.id_departamento,dep.nombre_departamento,dep.imagen,dep.color,dep.color2);
+			 deps+=construir_departamento(dep.id_departamento,dep.nombre_departamento,dep.imagen,dep.color,dep.color2,dep.bordes);
 		});
 		$("#div_departamentos").html(deps);
 	}).fail(function(error) { alert_2("Error de conexión...");  console.log(error.responseJSON); });
 }
-function construir_departamento(id_departamento,descripcion,imagen,color,color2){
+function construir_departamento(id_departamento,descripcion,imagen,color,color2,bordes){
+	var hide = "";
+	if(bordes==0){
+		descripcion="";
+		hide="cont_dep_hide";
+	}
+	/*
+	color2="";
+	
+	*/
 	return "<div class='col-xs-6' ><a  class='img_dep' dep='"+id_departamento+"' nombre='"+descripcion+"'>"+
-            "<div class='contenedor_departamento' style='background-color: "+color+";'>"+
+            "<div class='contenedor_departamento "+hide+"' style='background-color: "+color+";'>"+
                 "<p style='color:"+color2+"'>"+descripcion+"</p>"+
                 "<div>"+
                     "<img src='"+imagen+"' >"+

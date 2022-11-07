@@ -85,6 +85,11 @@
     border: 1px solid #cfcece;
 	margin-bottom: 5px;
 }
+.cont_dep_hide{
+	box-shadow: none;
+    border: none;
+    height: auto;
+}
 .contenedor_departamento:active {
   box-shadow: 0px 0px 0px 0px;
   transform: translateY(2px);
@@ -95,29 +100,29 @@
 	color: white;
 }
 .contenedor_departamento div{
-	width: 75%;
+	width: 90%;
 	margin: auto;
 	background-color: white;
 	border-radius: 20px;
 }
 .contenedor_departamento div img{
 	width: 100%;
-	max-height: 120px;
+	/*max-height: 120px;*/
 	border-radius: 8px;
 }
 .contenedor_subdepartamento{
 	border-radius: 8px;
     padding-top: 10px;
     margin-top: 20px;
-    box-shadow: -5px 5px 3px 0px #7e7e7e;
-    border: 1px solid #cfcece;
+    box-shadow: -5px 5px 3px 0px #dbdbdb;
+    border: 1px solid #f7f7f7;
 }
 .contenedor_subdepartamento:active {
   box-shadow: 0px 0px 0px 0px;
   transform: translateY(2px);
 }
 .contenedor_subdepartamento img{
-	border-radius: 50px;
+	border-radius: 8px;
 }
 .cerrar_ventana,
 .cerrar_ventana:hover,
@@ -165,7 +170,7 @@
 
 .menu_bar{
 	/*background-color: #cc0000; */
-	background-color: #ffffff;
+	background-color: #f7f6f6;
 	padding: 10px;
 	height: 10%;
 	color: white;
@@ -176,7 +181,7 @@
 }
 .menu_bar2{
 	/*background-color: #cc0000; */
-	background-color: #fcc23f;
+	background-color: #f36b6b;
 	padding: 10px;
 	height: 8%;
 	color: white;
@@ -454,17 +459,18 @@
 	left:0px;
 	background-color:white;
 	width: 80%;
-	height: calc(100% - 25px );
+	height: calc(100% - 30px );
 	height: calc(100% - constant(safe-area-inset-top) );
 	/*height: calc(100% - env(safe-area-inset-top) );*/
 	z-index: 3;
 	border-top-right-radius: 7px;
 }
 .menu_lateral_cliente{
-	width: 102%;
+	width: 100%;
 	padding-left: 20px; 
 	color:white;
 	background-color:#6db66f;
+	font-weight: bold;
 	/*border-top-right-radius: 7px;
 	border-bottom-right-radius: 7px;
 	*/
@@ -476,7 +482,7 @@
 .datos_cliente{
     margin-left: 60px;
     /* padding-bottom: 20px; */
-    padding-top: 28px;
+    /*padding-top: 28px;*/
 }
 .sombra_menu{
 	position: absolute;
@@ -499,7 +505,7 @@
 	right:0px;
 	background-color:white;
 	width: 80%;
-	height: calc(100% - 25px );
+	height: calc(100% - 30px );
 	height: calc(100% - constant(safe-area-inset-top) );
 	/*height: calc(100% - env(safe-area-inset-top) );*/
 	z-index: 3;
@@ -521,10 +527,10 @@
     position: relative;
 }
 .menu_lateral_carrito{
-	margin-left: -2%;
+	/*margin-left: -2%;*/
 	padding:0px 0px 0px 0px;
 	color:white;
-	background-color:#6db66f;
+	background-color:#f36b6b;
 	text-align: center;
 	display: flex;
     align-items: center;
@@ -562,8 +568,10 @@
 }
 .div_procesar_pedido_contenido{
 	position: absolute;
+	/*
 	height: calc(100% - 25px );
 	height: calc(100% - constant(safe-area-inset-top) );
+	*/
 	/*height: calc(100% - env(safe-area-inset-top) );*/
 	left:2%;
 	width: 94%;
