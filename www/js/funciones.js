@@ -44,7 +44,7 @@ $(document).ready(function() {
 				string+="<div class='col-xs-6' style='text-align:right'><a  class='ver_todo_link' dep='"+temp_dep+"'>Ver todo</a></div></div>";
 				string+="<div class='contenedor_subdepartamentos'>"
 				$.each(jQuery.parseJSON(r), function( i, subdep ) {
-					string+=construir_subdepartamento(subdep.id_departamento,subdep.id_subdepartamento,subdep.imagen,subdep.nombre_subdepartamento,subdep.color,subdep.color2);
+					string+=construir_subdepartamento(subdep.id_departamento,subdep.id_subdepartamento,subdep.imagen,subdep.nombre_subdepartamento,subdep.color,subdep.color2,subdep.bordes);
 				})
 				string+="</div></div>";
 				crecer_buscador();
@@ -603,9 +603,14 @@ function construir_departamento(id_departamento,descripcion,imagen,color,color2,
             "</a></div>";
 }
 
-function construir_subdepartamento(id_departamento,id_subdepartamento,imagen,nombre_subdepartamento,color,color2,){
+function construir_subdepartamento(id_departamento,id_subdepartamento,imagen,nombre_subdepartamento,color,color2,borde){
+	if(borde=='1'){
 		return "<div class='col-xs-6 img_subdep' dep='"+id_departamento+"' subdep='"+id_subdepartamento+"'>"+
 					"<div class='contenedor_subdepartamento'style='background-color:"+color+"; color:"+color2+";'><img src='"+imagen+"'><p>"+nombre_subdepartamento+"</p></div></div>";
+	}else{
+		return "<div class='col-xs-6 img_subdep' dep='"+id_departamento+"' subdep='"+id_subdepartamento+"'>"+
+					"<div><img src='"+imagen+"'></div></div>";
+	}
 	}
 
 // loader global
