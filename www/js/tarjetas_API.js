@@ -99,7 +99,7 @@ function confirm_tarjeta(mensaje, codigo) {
     $("#Modal_respuesta_tarjeta").modal({backdrop: 'static', keyboard: false});
     $('#btnOperacionAprovada').off("click").click(function() {
        $("#Modal_confirm").modal("hide");
-       location.reload();
+       regresar_inicio();
     });
     $('#btnOperacionRechazada').off("click").click(function() {
     	$("#Modal_respuesta_tarjeta").modal("hide");

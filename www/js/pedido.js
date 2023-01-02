@@ -77,6 +77,12 @@ function mostrar_tabla(){
 		$('#scheck2').click();
 		return;
 	}
+	if(parseFloat($('.pedido_articulos').html())<5&&$('input:radio[name=servicio]:checked').val()==1){
+		alert_2("La cantidad de articulos no alcanza el mínimo de 5 para el servicio de envío a domicilio");
+		$('#scheck2').click();
+		return;
+	}
+
 	if($('input:radio[name=servicio]:checked').val()==1){
 		$(".tabla_cuenta_recoger").fadeOut(0);
 		$(".tabla_cuenta").fadeIn(500);
@@ -96,7 +102,7 @@ function mostrar_tabla(){
 	//mostrar_tabla_pago();
 }
 
-$(".recoger_sucursal").change(function() {
+$(document).on("change",".recoger_sucursal",function() {
 	$(".pedido_id_sucursal").val($(this).val());
 	$(".pedido_sucursal").val($(this).children("option:selected").html());
 	reset_fecha();

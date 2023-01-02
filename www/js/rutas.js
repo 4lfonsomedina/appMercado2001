@@ -38,7 +38,7 @@ $(document).ready(function() {
 	//funcion de cargar emergente para IOS
 	$(document).on("click",".blank_a",function(x){
 		x.preventDefault();
-		$("#modal_bienvenida").modal('hide');
+		$('.modal').modal('hide');
 		if(!$(this).attr("disabled")){
 			//$(".sombra_menu").click();
 	   		//window.location.href = $(this).attr('abrir');
